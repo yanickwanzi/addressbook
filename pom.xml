@@ -5,8 +5,8 @@
     <groupId>com.vaadin.tutorial</groupId>
     <artifactId>addressbook</artifactId>
     <packaging>war</packaging>
-    <version>2.0</version>
-    <name>Vaadin Addressbook example</name>
+    <version>1.0</version>
+    <name>ndifor Addressbook demo</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,8 +16,8 @@
     </properties>
     <repositories>
         <repository>
-            <id>vaadin-prereleases</id>
-            <name>Vaadin Pre-releases</name>
+            <id>ndifor-prereleases</id>
+            <name>ndifor Pre-releases</name>
             <url>https://maven.vaadin.com/vaadin-prereleases</url>
         </repository>
         <!-- Essential Vaadin artifacts are in maven central, but maven.vaadin.com 
