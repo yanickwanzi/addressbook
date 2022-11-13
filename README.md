@@ -23,7 +23,7 @@ These instructions were tested on IntelliJ IDEA 14 CE. You can get it from https
 
 To get the project up and running in IDEA, do:
 - File -> New -> Project from Version Control -> Git
-- The URL to use is https://github.com/vaadin/addressbook.git
+- The URL to use is https://github.com/fusi/addressbook.git
 - If you get a message about "Non-managed pom.xml file found". Choose "Add as Maven Project"
 - If you get a message about no JDK or SDK being selected. Choose "Configure" and select your installed JDK. You can also set the JDK using File -> Project Structure
 - To start the project, find the "Maven Projects" tab on the right hand side of the screen and navigate to
@@ -38,7 +38,7 @@ These instructions were tested on NetBeans 8.0.2. You can get it from https://ww
 
 To checkout and run the project in NetBeans, do:
 - Team -> Git -> Clone
-- Set repository URL to https://github.com/vaadin/addressbook.git
+- Set repository URL to https://github.com/fusi/addressbook.git
 - Finish
 - Right click the imported project (Vaadin Addressbook Application) and select Run
 - Select GlassFish Server 4.1 -> Remember in Current IDE Session -> OK
