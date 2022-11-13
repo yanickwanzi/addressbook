@@ -6,7 +6,7 @@
     <artifactId>addressbook</artifactId>
     <packaging>war</packaging>
     <version>1.0</version>
-    <name>ndifor Addressbook demo</name>
+    <name>fusi Addressbook demo</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
