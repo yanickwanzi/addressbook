@@ -29,7 +29,8 @@ tools {
            -Dsonar.projectName='adressbook-app' \
            -Dsonar.host.url=https://sonar.shiawslab.com \
            -Dsonar.token=$SONAR_TOKEN \
-           -Dsonar.exclusions=src/java/com/**"
+           -Dsonar.sources=src/main/java/ \
+           -Dsonar.java.binaries=target/classes"
           }
          }
        }
