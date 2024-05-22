@@ -54,7 +54,7 @@ tools {
       stage ('6. Email Notification') {
          steps{
          mail bcc: 'fusisoft@gmail.com', body: '''Build is Over. Check the application using the URL below. 
-         https//addressbook.shiawslab.com
+         https//abook.shiawslab.com/addressbook-1.0
          Let me know if the changes look okay.
          Thanks,
          Dominion System Technologies,
