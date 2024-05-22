@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: addressbook-container
-          image: 322266404742.dkr.ecr.us-west-2.amazonaws.com/addressbook:1.1.0
+          image: 322266404742.dkr.ecr.us-west-2.amazonaws.com/addressbook:1.2.0
           ports:
             - containerPort: 8080
