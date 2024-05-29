@@ -43,14 +43,14 @@ tools {
           sh "sudo docker push ${params.aws_account}.dkr.ecr.us-west-2.amazonaws.com/addressbook:${params.ecr_tag}"
          }
        }
-      stage('5. Application deployment in eks cluster') {
+      stage('5. Application deployment in eks') {
         steps{
           kubeconfig(caCertificate: '',credentialsId: 'k8s-kubeconfig', serverUrl: '') {
           sh "kubectl apply -f manifest"
           }
          }
        }
-      stage('6. Monitoring solution deployment in eks cluster') {
+      stage('6. Monitoring solution deployment in eks') {
         steps{
           kubeconfig(caCertificate: '',credentialsId: 'k8s-kubeconfig', serverUrl: '') {
           sh "kubectl apply -f monitoring"
