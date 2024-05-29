@@ -6,6 +6,7 @@ OIDC_PROVIDER=$(aws eks describe-cluster --name $CLUSTER_NAME --query "cluster.i
 SERVICE_ACCOUNT_AMP_QUERY_NAME=amp-iamproxy-query-service-account
 SERVICE_ACCOUNT_IAM_AMP_QUERY_ROLE=amp-iamproxy-query-role
 SERVICE_ACCOUNT_IAM_AMP_QUERY_POLICY=AMPQueryPolicy
+REGION=us-west-2 
 #
 # Setup a trust policy designed for a specific combination of K8s service account and namespace to sign in from a Kubernetes cluster which hosts the OIDC Idp.
 #
@@ -96,4 +97,4 @@ echo $SERVICE_ACCOUNT_IAM_AMP_QUERY_ROLE_ARN
 # Associate this IdP with AWS IAM so that the latter can validate and accept the OIDC tokens issued by Kubernetes to service accounts.
 # Doing this with eksctl is the easier and best approach.
 #
-eksctl utils associate-iam-oidc-provider --cluster $CLUSTER_NAME --approve
+eksctl utils associate-iam-oidc-provider --$REGION --cluster $CLUSTER_NAME --approve
