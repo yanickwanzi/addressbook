@@ -97,4 +97,4 @@ echo $SERVICE_ACCOUNT_IAM_AMP_INGEST_ROLE_ARN
 # Associate this IdP with AWS IAM so that the latter can validate and accept the OIDC tokens issued by Kubernetes to service accounts.
 # Doing this with eksctl is the easier and best approach.
 #
-eksctl utils associate-iam-oidc-provider --$REGION --cluster $CLUSTER_NAME --approve
+eksctl utils associate-iam-oidc-provider --region $REGION --cluster $CLUSTER_NAME --approve
