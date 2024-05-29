@@ -64,3 +64,12 @@ To use the built in server adapters of Eclipse, instead of doing "Run As -> Mave
 - Run As -> Run on Server
 - Select the server you want to run on, e.g. Apache Tomcat 8 and click ok
 - *Do not use the suggested J2EE Preview server* as it is outdated, deprecated and does not support Servlet 3, which is required for this application
+
+
+
+aws iam attach-role-policy \
+--role-name node-group-02-eks-node-group-20240528165440965800000001 \
+--policy-arn arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy 
+
+
+aws eks create-addon --cluster-name dominion-cluster --region us-west-2 --addon-name amazon-cloudwatch-observability
