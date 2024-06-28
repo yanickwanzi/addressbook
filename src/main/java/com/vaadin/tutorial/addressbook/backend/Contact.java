@@ -84,7 +84,7 @@ public class Contact implements Serializable, Cloneable {
     public String toString() {
         return "Contact{" + "id=" + id + ", firstName=" + firstName
                 + ", lastName=" + lastName + ", phone=" + phone + ", email="
-                + mail + ", irthDate=" + birthDate + '}';
+                + email + ", birthDate=" + birthDate + '}';
     }
 
 }
