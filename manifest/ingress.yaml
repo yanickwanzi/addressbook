@@ -5,7 +5,7 @@ metadata:
   namespace: directory
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-west-2:322266404742:certificate/bc574743-1292-4051-8152-77e1646f6655
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-2:108367059910:certificate/a907ef78-3249-4436-85a3-fcfe3c2467f8
     #   alb.ingress.kubernetes.io/subnets:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
     alb.ingress.kubernetes.io/target-type: ip
@@ -18,11 +18,11 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: abook.shiawslab.com
+    - host: abook.king1z.com
       http:
         paths:
           - path: /addressbook-1.0
-            pathType: Prefix
+            pathType: Prefix  ``
             backend:
               service:
                 name: addressbook-service
