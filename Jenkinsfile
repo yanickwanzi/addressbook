@@ -22,9 +22,9 @@ tools {
       environment {SONAR_TOKEN = credentials('sonar-token-abook')}
       steps {
        script {
-         def scannerHome = tool 'SonarQube-Scanner-6.0.0';
+         def scannerHome = tool 'SonarQube-Scanner-6.1.0';
          withSonarQubeEnv("sonarqube-integration") {
-         sh "${tool("SonarQube-Scanner-6.0.0")}/bin/sonar-scanner  \
+         sh "${tool("SonarQube-Scanner-6.1.0")}/bin/sonar-scanner  \
            -Dsonar.projectKey=addressbook-application \
            -Dsonar.projectName='addressbook-application' \
            -Dsonar.host.url=https://sonar.king1z.com \
@@ -67,7 +67,7 @@ tools {
          Let me know if the changes look okay.
          Thanks,
          Dominion System Technologies,
-         +1 (313) 413-1477''', cc: 'wanzi@gmail.com', from: '', replyTo: '', subject: 'Application was Successfully Deployed!!', to: 'fusisoft@gmail.com'
+         +1 (313) 413-1477''', cc: 'wanzi1ky@gmail.com', from: '', replyTo: '', subject: 'Application was Successfully Deployed!!', to: 'wanzi1ky@gmail.com'
       }
     }
  }
