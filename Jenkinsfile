@@ -39,7 +39,7 @@ tools {
          steps{
           sh "aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin ${params.aws_account}.dkr.ecr.us-east-2.amazonaws.com"
           sh "sudo docker build -t addressbook ."
-          sh "docker tag addressbook:latest ${params.aws_account}.dkr.ecr.us-east-2.amazonaws.com/addressbook:${params.ecr_tag}"
+          sh "sudo docker tag addressbook:latest ${params.aws_account}.dkr.ecr.us-east-2.amazonaws.com/addressbook:${params.ecr_tag}"
           sh "docker push ${params.aws_account}.dkr.ecr.us-east-2.amazonaws.com/addressbook:${params.ecr_tag}"
          }
        }
