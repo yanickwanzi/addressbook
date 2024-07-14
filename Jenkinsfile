@@ -37,20 +37,13 @@ tools {
       }
       stage('4. Docker image build') {
          steps{
-           sh """
-                if ! command -v aws &> /dev/null; then
-                    echo "AWS CLI not found, installing..."
-                    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-                    unzip awscliv2.zip
-                    sudo ./aws/install
-                fi
           sh "aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin ${params.aws_account}.dkr.ecr.us-east-2.amazonaws.com"
           sh "sudo docker build -t addressbook ."
           sh "sudo docker tag addressbook:latest ${params.aws_account}.dkr.ecr.us-east-2.amazonaws.com/addressbook:${params.ecr_tag}"
           sh "sudo docker push ${params.aws_account}.dkr.ecr.us-east-2.amazonaws.com/addressbook:${params.ecr_tag}"
          }
        }
-          """   
+
 
       stage('5. Application deployment in eks') {
         steps{
