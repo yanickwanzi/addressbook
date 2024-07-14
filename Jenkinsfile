@@ -26,7 +26,7 @@ tools {
          withSonarQubeEnv("sonarqube-integration") {
          sh "${tool("SonarQube-Scanner-6.1.0.4477")}/bin/sonar-scanner  \
            -Dsonar.projectKey=addressbook-webapp \
-           Dsonar.projectName='addressbook-webapp' \
+           -Dsonar.projectName='addressbook-webapp' \
            -Dsonar.host.url=https://sonarqube.king1z.com \
            -Dsonar.token=$SONAR_TOKEN \
            -Dsonar.sources=src/main/java/ \
