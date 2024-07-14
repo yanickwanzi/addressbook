@@ -22,9 +22,9 @@ tools {
       environment {SONAR_TOKEN = credentials('sonar-project-token')}
       steps {
        script {
-         def scannerHome = tool 'SonarQube-Scanner-6.1.0';
+         def scannerHome = tool 'SonarQube-Scanner-6.1.0.4477';
          withSonarQubeEnv("sonarqube-integration") {
-         sh "${tool("SonarQube-Scanner-6.1.0")}/bin/sonar-scanner  \
+         sh "${tool("SonarQube-Scanner-6.1.0.4477")}/bin/sonar-scanner  \
            -Dsonar.projectKey=addressbook-webapp \
            Dsonar.projectName='addressbook-webapp' \
            -Dsonar.host.url=https://sonarqube.king1z.com \
