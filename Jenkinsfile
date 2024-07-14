@@ -25,8 +25,8 @@ tools {
          def scannerHome = tool 'SonarQube-Scanner-6.1.0';
          withSonarQubeEnv("sonarqube-integration") {
          sh "${tool("SonarQube-Scanner-6.1.0")}/bin/sonar-scanner  \
-           -Dsonar.projectKey=addressbook-application \
-           -Dsonar.projectName='addressbook-application' \
+           -Dsonar.projectKey=addressbook-webapp \
+           Dsonar.projectName='addressbook-webapp' \
            -Dsonar.host.url=https://sonarqube.king1z.com \
            -Dsonar.token=$SONAR_TOKEN \
            -Dsonar.sources=src/main/java/ \
