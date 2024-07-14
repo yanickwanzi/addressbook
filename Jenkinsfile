@@ -10,7 +10,7 @@ tools {
     stages {
       stage('1. Git Checkout') {
         steps {
-          git branch: 'main', credentialsId: 'Github-pat', url: 'https://github.com/yanickwanzi/addressbook.git'
+          git branch: 'main', credentialsId: 'github-repo-PAT', url: 'https://github.com/yanickwanzi/addressbook.git'
         }
       }
       stage('2. Build with maven') { 
@@ -27,7 +27,7 @@ tools {
          sh "${tool("SonarQube-Scanner-6.1.0")}/bin/sonar-scanner  \
            -Dsonar.projectKey=addressbook-application \
            -Dsonar.projectName='addressbook-application' \
-           -Dsonar.host.url=https://sonar.king1z.com \
+           -Dsonar.host.url=https://sonarqube.king1z.com \
            -Dsonar.token=$SONAR_TOKEN \
            -Dsonar.sources=src/main/java/ \
            -Dsonar.java.binaries=target/classes"
